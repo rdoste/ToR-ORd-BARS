@@ -14,6 +14,7 @@ To run the simulation, execute the main script:
 ```matlab
 Main_BARS.m
 
+```
 This script runs four different cases:
 
 Control without BARS
