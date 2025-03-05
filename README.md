@@ -19,7 +19,7 @@ This script runs four different cases:
 
 - Control without BARS
 - Control with BARS
-- HCM without BARS (corrected spelling)
+- HCM without BARS 
 - HCM with BARS
 
 
