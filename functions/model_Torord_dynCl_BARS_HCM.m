@@ -178,13 +178,13 @@ CaMKa=CaMKb+CaMKt;
              
 %  %% Test%%%%%%%%%%%%%%%%%%%%%%%%%%     
 %    fICaLP=0;
-%  fIKsP =0;
+  fIKsP =fIKsP*0.1; %reduction in gain of potassium currents
 %  fPLBP =0;
 %  fTnIP =0;
 %  fINaP=0;
 %    fINaKP =0;
 %    fRyRP =0;
-%  fIKurP =0;
+  fIKurP =fIKurP*0.1; %reduction in gain of potassium currents
 %   Whole_cell_PP1 = 0.1371;
 %  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
     else
@@ -263,7 +263,7 @@ if celltype==1
     GKb=GKb*0.6;
 end
 GKbNP=GKb;
-GKbP=GKb*1.02;%BetaAdrenergic;
+GKbP=GKb*1.2;%BetaAdrenergic;
 IKb_P=GKbP*xkb*(v-EK);
 IKb_NP=GKbNP*xkb*(v-EK);
 IKb =(1 - fIKurP) * IKb_NP + fIKurP* IKb_P;
@@ -842,7 +842,7 @@ xs2ss=xs1ss;
 txs2=1.0/(0.01*exp((v-50.0)/20.0)+0.0193*exp((-(v+66.54))/31.0));
 dxs2=(xs2ss-xs2)/txs2;
 KsCa=1.0+0.6/(1.0+(3.8e-5/cai)^1.4);
-GKs= 0.0011 * IKs_Multiplier*0.55 ; % HCMP  ;
+GKs= 0.0011 * 5 * IKs_Multiplier*0.55; % HCMP
 if celltype==1
     GKs=GKs*1.4;
 end
@@ -854,7 +854,7 @@ IKs_NP=GKs*KsCa*xs1*xs2*(v-EKs);
 %  txs1_P=0.6*txs1;
 dxs1_P=(xs1ss-xs1_P)/txs1_P;
 
-GKs_P=GKs*5;%BetaAdrenergic
+GKs_P=GKs*10;%BetaAdrenergic
 
 IKs_P=GKs_P*KsCa*xs1_P*xs2*(v-EKs);
 
