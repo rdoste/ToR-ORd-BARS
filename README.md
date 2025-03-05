@@ -17,12 +17,12 @@ Main_BARS.m
 ```
 This script runs four different cases:
 
-Control without BARS
-Control with BARS
-HCM without BARS (corrected spelling)
-HCM with BARS
+- Control without BARS
+- Control with BARS
+- HCM without BARS (corrected spelling)
+- HCM with BARS
 
 
-Citation
+# Citation
 Doste R, Coppini R, Bueno-Orovio A. Remodelling of potassium currents underlies arrhythmic action potential prolongation under beta-adrenergic stimulation in hypertrophic cardiomyopathy. J Mol Cell Cardiol. 2022 Nov;172:120-131. doi: 10.1016/j.yjmcc.2022.08.361. Epub 2022 Sep 2. PMID: 36058298.
 
