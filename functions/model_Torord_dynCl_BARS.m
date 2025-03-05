@@ -813,7 +813,7 @@ xs2ss=xs1ss;
 txs2=1.0/(0.01*exp((v-50.0)/20.0)+0.0193*exp((-(v+66.54))/31.0));
 dxs2=(xs2ss-xs2)/txs2;
 KsCa=1.0+0.6/(1.0+(3.8e-5/cai)^1.4);
-Ks= 0.0011 * 5 * IKs_Multiplier;
+GKs= 0.0011 * 5 * IKs_Multiplier;
 if celltype==1
     GKs=GKs*1.4;
 end
