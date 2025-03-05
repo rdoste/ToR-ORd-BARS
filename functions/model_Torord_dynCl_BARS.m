@@ -813,7 +813,7 @@ xs2ss=xs1ss;
 txs2=1.0/(0.01*exp((v-50.0)/20.0)+0.0193*exp((-(v+66.54))/31.0));
 dxs2=(xs2ss-xs2)/txs2;
 KsCa=1.0+0.6/(1.0+(3.8e-5/cai)^1.4);
-GKs= 0.0011 * IKs_Multiplier;
+Ks= 0.0011 * 5 * IKs_Multiplier;
 if celltype==1
     GKs=GKs*1.4;
 end
@@ -825,7 +825,7 @@ IKs_NP=GKs*KsCa*xs1*xs2*(v-EKs);
 % txs1_P=0.6*txs1;
 dxs1_P=(xs1ss-xs1_P)/txs1_P;
 
-GKs_P=GKs*50;%BetaAdrenergic
+GKs_P=GKs*10;%BetaAdrenergic
 
 IKs_P=GKs_P*KsCa*xs1_P*xs2*(v-EKs);
 
